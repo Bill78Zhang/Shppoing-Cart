@@ -23,7 +23,9 @@ const CartContainer = ({cart, dispatch}) => {
       {/* cart items */}
       <article>
         {cart.map(item => {
-          return <CartItem key={item.id} {...item} />;
+          if (item.amount !== 0) {
+            return <CartItem key={item.id} {...item} />;
+          }
         })}
       </article>
       {/* cart footer */}
