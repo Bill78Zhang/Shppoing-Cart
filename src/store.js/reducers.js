@@ -1,4 +1,6 @@
-const reducer = (state, action) => {
+import {initStore} from './configureStore';
+
+const reducer = (state = initStore, action) => {
   const {type, payload} = action;
   switch (type) {
     case 'CLEARCART':
